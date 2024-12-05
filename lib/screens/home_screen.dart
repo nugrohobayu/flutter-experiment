@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_experiment/screens/carousel_screen.dart';
 import 'package:flutter_experiment/screens/local_notif_screen.dart';
 import 'package:flutter_experiment/screens/news_details_page.dart';
+import 'package:flutter_experiment/screens/tooltip_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,6 +21,14 @@ class HomeScreen extends StatelessWidget {
       {
         'title': 'News',
         'page': const NewsDetailsPage(),
+      },
+      {
+        'title': 'Carousel',
+        'page': const CarouselScreen(),
+      },
+      {
+        'title': 'Tooltip',
+        'page': const TooltipScreen(),
       },
     ];
     return Scaffold(
