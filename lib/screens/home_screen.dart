@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_experiment/screens/carousel_screen.dart';
+import 'package:flutter_experiment/screens/hive_screen.dart';
 import 'package:flutter_experiment/screens/navbar_screen.dart';
 import 'package:flutter_experiment/screens/news_details_page.dart';
 import 'package:flutter_experiment/screens/onboarding_screen.dart';
@@ -44,6 +45,10 @@ class HomeScreen extends StatelessWidget {
         'title': 'Navigation Bar',
         'page': NavbarScreen(),
       },
+      {
+        'title': 'Hive',
+        'page': HiveScreen(),
+      },
     ];
     return Scaffold(
       appBar: AppBar(
@@ -52,23 +57,22 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
         children: menus
-            .map((e) =>
-            Padding(
-              padding: const EdgeInsets.only(bottom: 16.0),
-              child: ListTile(
-                title: Text(e['title']),
-                shape: Border.all(color: Colors.grey, width: 1),
-                trailing: const Icon(Icons.arrow_forward_ios),
-                onTap: () {
-                  print('object');
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => e['page'],
-                      ));
-                },
-              ),
-            ))
+            .map((e) => Padding(
+                  padding: const EdgeInsets.only(bottom: 16.0),
+                  child: ListTile(
+                    title: Text(e['title']),
+                    shape: Border.all(color: Colors.grey, width: 1),
+                    trailing: const Icon(Icons.arrow_forward_ios),
+                    onTap: () {
+                      print('object');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => e['page'],
+                          ));
+                    },
+                  ),
+                ))
             .toList(),
       ),
     );
