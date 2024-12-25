@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class NavbarScreen extends StatefulWidget {
@@ -50,7 +49,7 @@ class _NavbarScreenState extends State<NavbarScreen> {
             shape: BoxShape.circle,
           ),
           child: Icon(
-            OctIcons.comment_discussion,
+            Icons.forum,
             color: Colors.blue,
             size: 20,
           ),
@@ -65,7 +64,7 @@ class _NavbarScreenState extends State<NavbarScreen> {
             shape: BoxShape.circle,
           ),
           child: Icon(
-            OctIcons.comment_discussion,
+            Icons.forum,
             color: Colors.grey,
             size: 20,
           ),
@@ -94,8 +93,12 @@ class _NavbarScreenState extends State<NavbarScreen> {
     PersistentBottomNavBarItem(
       icon: Padding(
         padding: const EdgeInsets.all(8.0),
+        // child: SvgPicture.asset(
+        //   'assets/images/ic-akun.svg',
+        //   colorFilter: ColorFilter.mode(Colors.red, BlendMode.darken),
+        // ),
         child: Icon(
-          FontAwesome.circle_user_solid,
+          Icons.account_circle,
         ),
       ),
       title: "Akun",
