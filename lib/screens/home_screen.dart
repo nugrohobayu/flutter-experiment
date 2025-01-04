@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_experiment/screens/calculator_screen.dart';
 import 'package:flutter_experiment/screens/carousel_screen.dart';
 import 'package:flutter_experiment/screens/hive_screen.dart';
 import 'package:flutter_experiment/screens/navbar_screen.dart';
@@ -48,6 +49,10 @@ class HomeScreen extends StatelessWidget {
       {
         'title': 'Hive',
         'page': HiveScreen(),
+      },
+      {
+        'title': 'Calculator',
+        'page': CalculatorScreen(),
       },
     ];
     return Scaffold(
