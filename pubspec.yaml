@@ -26,7 +26,7 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   flutter_simple_calculator: ^2.3.0
-  syncfusion_flutter_charts: ^28.1.37
+  syncfusion_flutter_charts: ^20.4.50
 
 
 dev_dependencies:
